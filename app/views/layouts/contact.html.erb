@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Y</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_include_tag "application", "data-turbo-track": "reload", type: "module" %>
+  </head>
+
+  <body>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <div class="container-fluid">
+        <h1>Contact Information</h1>
+        <p>Alfredo Divin</p>
+        <p>adivin@Y.com</p>
+        <p>Message:</p>
+        <input type="text" id="inputvalue">
+        <button type="button" class="btn btn-primary" data-bs-toggle="collapse" data-bs-target="#collapsed" aria-expanded="false" aria-controls="collapseExample" onclick="myFunction()">Click me now!</button>
+        <div class="collapse" id="collapsed">
+            <div class="alert alert-light" role="alert" id="button1"></div>
+        </div>
+        <script> 
+            function myFunction() {
+            let myvalue = document.getElementById("inputvalue").value;
+            console.log(myvalue);
+            document.getElementById("button1").innerHTML = `Thank you for your message, we will contact you soon.`;
+            }
+        </script>
+    </div>
+    <%= yield %>
+  </body>
+</html>
