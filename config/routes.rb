@@ -7,6 +7,6 @@ Rails.application.routes.draw do
 
   # Defines the root path route ("/")
   # root "posts#index"
-  get views/layout/application
-  root views/layout#application
+  get layout/application
+  root layout#application
 end
