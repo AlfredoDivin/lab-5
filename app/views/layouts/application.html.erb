@@ -15,34 +15,36 @@
   </head>
 
   <body>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <div class="container-fluid d-flex flex-column min-vh-100">
   <nav class="navbar navbar-expand-lg bg-light">
     <div class="container-fluid">
       <a class="navbar-brand"><h1>Y</h1></a>
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="home">Home</a>
+            <a class="nav-link active" aria-current="page" href="<%= home_path %>">Home</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="about">About</a>
+            <a class="nav-link active" aria-current="page" href="<%= about_path %>">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="contact">Contact</a>
+            <a class="nav-link active" aria-current="page" href="<%= contact_path %>">Contact</a>
           </li>
         </ul>
       </div>
-      <div class="row align-items-end">
-        <div class="col">
-          <footer>
-            <h4>Copyright© 2024</h4>
-            <p>All rights reserved</p>
-            <a class="nav-link disabled">adivin@Y</a>
-          </footer>
-        </div>
-      </div>
     </div>
   </nav>
-    <%= yield %>
+  <%= yield %>
+  
+  <div class="flex-grow-1"></div>
+  <footer class="row mt-auto">
+    <div class="col">
+      <h4>Copyright© 2024</h4>
+      <p>All rights reserved</p>
+      <a class="nav-link disabled">adivin@Y</a>
+    </div>
+  </footer>
+</div>
+    
   </body>
 </html>
